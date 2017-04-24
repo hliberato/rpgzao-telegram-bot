@@ -13,10 +13,16 @@ else {
 
 console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
-bot.onText(/^/, function (msg) {
+bot.onText(/\/echo (.+)/, (msg, match) {
   var name = msg.from.first_name;
   bot.sendMessage(msg.chat.id, 'Bem vindo ao Bot do grupo RPGzão, ' + name + '!').then(function () {
   });
 });
+
+// bot.onText(/^/, function (msg) {
+//   var name = msg.from.first_name;
+//   bot.sendMessage(msg.chat.id, 'Bem vindo ao Bot do grupo RPGzão, ' + name + '!').then(function () {
+//   });
+// });
 
 module.exports = bot;
