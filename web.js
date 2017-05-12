@@ -9,9 +9,10 @@ app.get('/', function (req, res) {
   res.json({ version: packageInfo.version });
 });
 
-var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
-var server = app.listen(process.env.OPENSHIFT_NODEJS_PORT, server_ip_address, function () {
-  console.log('Web server started');
+var server = app.listen(process.env.OPENSHIFT_NODEJS_PORT, "0.0.0.0", function () {
+  var host = server.address().address;
+  var port = server.address().port;
+  console.log('Web server started at http://%s:%s', host, port);
 });
 
 module.exports = function (bot) {
