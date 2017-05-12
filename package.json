@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "Starter pack for running telegram bot on the Heroku using Node.js",
   "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
   },
-  "author": "Volodymyr Lut",
-  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
