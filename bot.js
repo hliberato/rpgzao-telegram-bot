@@ -75,6 +75,12 @@ bot.onText(/\/d4/, function onD20Text(msg) {
   bot.sendMessage(chatId, resp);
 });
 
+bot.onText(/\/odanilo/, function onDaniloText(msg) {
+  const chatId = msg.chat.id;
+  const resp = "é a mulher da minha vida";
+  bot.sendMessage(chatId, resp);
+});
+
 // bot.onText(/^/, function (msg) {
 //   var name = msg.from.first_name;
 //   bot.sendMessage(msg.chat.id, 'Bem vindo ao Bot do grupo RPGzão, ' + name + '!').then(function () {
