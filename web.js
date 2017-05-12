@@ -11,9 +11,7 @@ app.get('/', function (req, res) {
 
 var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 var server = app.listen(process.env.OPENSHIFT_NODEJS_PORT, "0.0.0.0", server_ip_address, function () {
-  var host = server.address().address;
-  var port = server.address().port;
-  console.log('Web server started at http://%s:%s', host, port);
+  console.log('Web server started');
 });
 
 module.exports = function (bot) {
